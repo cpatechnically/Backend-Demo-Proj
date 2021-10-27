@@ -1,0 +1,22 @@
+{% load static%}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{% static 'css/layout.css' %}">
+    <title>Document</title>
+</head>
+<body>
+<h1>{{pgname}}</h1>
+<div class="box-org"></div>
+<p>The above box has no padding or border and it stands at 100px</p>
+<div class="box-pad"></div>
+<p>This box has padding and border applied and the box size has INCREASED becasuse by default these properties are ADDED to the content box.</p>
+<div class="box-margin"></div>
+<p>The margin property doesn't effect the boxes SIZE, just the position in relation to other elements.</p>
+<h1>FIX the above issue by adding the box-sizing property as border-box</h1>
+<div class="box-borderbox"></div>
+</body>
+</html>

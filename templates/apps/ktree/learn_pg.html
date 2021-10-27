@@ -1,0 +1,64 @@
+{% extends 'reactdj/base_min.html' %}
+{% load static %}
+{% block content %}
+
+<section class="block container">
+    <header class="block__header">
+        <h2 class="block__heading">npx Method 1 - "npx Create React App"</h2>
+        <p>Have to pull in all the index text and update the css/js each build
+        </p>
+    </header>
+    <div style="width: 30%; padding:4rem">
+        <div class="card card--primary">
+            <header class="card__header">Build Static Files</header>
+            <div class="card__body">
+                - Add a folder to our django static file called "app" (for react)
+                - each build we copy React static files from the build/static dir to our "my_static/app" dir.
+            </div>
+        </div>
+        <div class="card card--secondary">
+            <header class="card__header">Card Title</header>
+            <div class="card__body">
+                Lorem, ipsum dolor sit amet consectetur adipisicing elit. Perferendis expedita maiores delectus!
+            </div>
+        </div>
+    </div>
+</section>
+<section class="block block--dark block--skewed-left">
+    <div class="container">
+        <h2 class="block__heading">Heading</h2>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ex quibusdam laborum cupiditate  impedit error minima.
+        </p>
+    </div>
+</section>
+
+<div class='col-4 mx-auto text-center'>
+    <h1>Overview</h1>
+    <div class='cap-ui'
+        data-input-class='form-control'
+        data-btn-class='btn btn-primary my-2'
+    ></div>
+
+    <div class='cap-ui'
+        data-input-class='form-control'
+        data-btn-class='btn btn-primary my-2'
+    ></div>
+
+
+    <div class='cap-ui'
+        data-input-class='form-control'
+        data-btn-class='btn btn-primary my-2'
+    ></div>
+
+    <div class='cap-ui'
+        data-input-class='form-control'
+        data-btn-class='btn btn-primary my-2'
+    ></div>
+
+    <div class='cap-ui'
+        data-input-class='form-control'
+        data-btn-class='btn btn-primary my-2'
+    ></div>
+</div>
+
+{% endblock %}

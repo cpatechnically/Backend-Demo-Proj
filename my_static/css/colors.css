@@ -1,0 +1,48 @@
+body {
+    margin: 10px;
+}
+
+.box {
+    width: 200px;
+    height:200px;
+    background-color: rgb(53, 53, 172);
+}
+.box-rgba {
+    width: 200px;
+    height:200px;
+    background-color: rgba(53,53,172,.5);
+}
+
+.box-gradient {
+    width: 200px;
+    height:200px;
+    background: linear-gradient(dodgerblue,yellow);
+}
+
+.box-border {
+    width: 600px;
+    height:200px;
+    background: dodgerblue;
+    border: 10px dashed royalblue;
+    border-width: 10px 20px;
+}
+
+.box-shadow {
+    width: 200px;
+    height:200px;
+    background: dodgerblue;
+    box-shadow: 10px 10px;
+}
+
+.box-shadow-altcolor {
+    width: 200px;
+    height:200px;
+    background: dodgerblue;
+    box-shadow: 10px 10px gray;
+}
+.box-shadow-soft {
+    width: 200px;
+    height:200px;
+    background: dodgerblue;
+    box-shadow: 0px 0px 30px gray;
+}

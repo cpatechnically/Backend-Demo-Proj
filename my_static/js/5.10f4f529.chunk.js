@@ -1,0 +1,2 @@
+(this.webpackJsonpnpxdemo=this.webpackJsonpnpxdemo||[]).push([[5],{90:function(e){e.exports=JSON.parse('[{"page":1,"required":true,"type":"text","name":"full_name","placeholder":"Your name..."},{"page":2,"required":true,"type":"textarea","name":"feedback","placeholder":"What is your feedback?"},{"page":3,"type":"radio","name":"feeling","options":[{"label":"Great","value":"great"},{"label":"Okay","value":"okay"},{"label":"Not well","value":"not_well"}]}]')}}]);
+//# sourceMappingURL=5.10f4f529.chunk.js.map

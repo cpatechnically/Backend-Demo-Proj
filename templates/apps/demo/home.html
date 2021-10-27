@@ -1,0 +1,59 @@
+{% extends "base/base.html" %}
+{% load static %}
+{% block title %}{% endblock %}
+
+{% block pgcontent %}
+
+<div class="row px-3 mb-3">
+    <h1 class="display-4"> Track Your Progress!</h1>
+</div>
+<div class="row">
+    <div class="col">
+        <h2>Course Stats</h2>
+        <p>It is important to log the courses you take for many reasons...</p>
+    </div>
+    <div class="col">
+        <h2>New Item</h2>
+        <div class='col text-center'>
+            <a href="#" class="btn btn-secondary my-2 ">New Item</a>
+        </div>
+    </div>
+</div>
+<div class='row mb-3' id="course-search-section">
+    {% if request.GET.q %}
+    <div class='col-12'>
+        <h5>Results for: <b>{{ request.GET.q }}</b></h5>
+        <hr/>
+    </div>
+    {% else %}
+    
+    <div class='col-12 col-md-6 mx-auto py-2'>
+        {% include 'apps/demo/forms/search-form.html' %}
+    </div>
+    <div class='col-12'>
+        <hr>
+    </div>
+    {% endif %}
+</div>
+<div class="row col-9 mb-3">
+    <div class="col">
+        <p>Total Items {{paginator.count}} / Current Range {{page_obj.num_pages}}</p>
+        <p>Total Pages {{page_obj.num_pages}} / Current Pg {{page_number}}</p>
+        <p>It is important to log the courses you take for many reasons...</p>
+    </div>
+</div>
+<div class="row col py-2 mb-3">
+    {% for obj in page_obj.object_list %}
+        {% include 'apps/demo/snippets/demo-card.html' with instance=obj %}
+    {% endfor %}
+</div>
+<div class="row">
+    <h1>Pagination Container</h1>
+    <div class="col-9 col-md-7 mx-auto py-2">
+        {% include 'sections/block/pagination.html' with page_obj=page_obj is_paginated=is_paginated paginator=paginator%}
+    </div>
+</div>
+
+
+{% endblock %}
+

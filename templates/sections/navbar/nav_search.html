@@ -1,0 +1,77 @@
+{% load static %}
+{% url 'index' as home_url %}
+{% url 'captures:react_spa' as captures_url %}
+{% url 'localconfig:home' as localconfig_url %}
+{% url 'vidly:react_spa' as vidly_url %}
+{% url 'survey:react_spa' as survey_url %}
+{% url 'posts:react_spa' as posts_url %}
+{% url 'demo:list' as demo_url %}
+{% url 'tweetme:home' as tweetme_url %}
+{% url 'cfereact:react_spa' as cfetryreact_url %}
+{% url 'htmlcss:home' as htmlcss_url %}
+{% url 'search:query' as search_url %}
+{% url 'accthome' as account_url %}
+{% url 'logout' as logout_url %}
+{% url 'login' as login_url %}
+
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark mb-3">
+  <a class="navbar-brand" href="{{ home_url }}">
+    <img src="{% static 'img/logo.svg' %}" class="d-inline-block align-top" alt=""/>
+  </a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+  <div class="collapse navbar-collapse" id="navbarSupportedContent">
+    <ul class="navbar-nav mr-auto mb-2 mb-lg-0">
+      {% if request.user.is_authenticated %}
+      <li class="nav-item {% if request.path == logout_url %}active{% endif %}">
+        <a class="nav-link" href="{{logout_url}}">Logout</a>
+      </li>
+      <li class="nav-item {% if request.path == tweetme_url %}active{% endif %}">
+        <a class="nav-link" href="{{ tweetme_url }}">TweetMe</a>
+      </li>
+      <li class="nav-item {% if request.path == cfetryreact_url %}active{% endif %}">
+        <a class="nav-link" href="{{ cfetryreact_url }}">CfeTry React</a>
+      </li>
+      <li class="nav-item {% if request.path == localconfig_url %}active{% endif %}">
+        <a class="nav-link" href="{{ localconfig_url }}">LocalConfig </a>
+      </li>
+      <li class="nav-item {% if request.path == captures_url %}active{% endif %}">
+        <a class="nav-link" href="{{ captures_url }}">Captures </a>
+      </li>
+      <li class="nav-item {% if request.path == survey_url %}active{% endif %}">
+        <a class="nav-link" href="{{ survey_url }}">React Survey</a>
+      </li>
+      <li class="nav-item {% if request.path == posts_url %}active{% endif %}">
+        <a class="nav-link" href="{{ posts_url }}">Posts</a>
+      </li>
+      <li class="nav-item {% if request.path == demo_url %}active{% endif %}">
+        <a class="nav-link" href="{{ demo_url }}">Demo Url</a>
+      </li>
+      <li class="nav-item {% if request.path == vidly_url %}active{% endif %}">
+        <a class="nav-link" href="{{ vidly_url }}">Vidly</a>
+      </li>
+      <li class="nav-item {% if request.path == htmlcss_url %}active{% endif %}">
+        <a class="nav-link" href="{{ htmlcss_url }}">HtmlCss</a>
+      </li>
+      <li class="nav-item {% if request.path == account_url %}active{% endif %}">
+        <a class="nav-link" href="{{ account_url }}">MyAccount</a>
+      </li>
+      <li class="nav-item {% if request.path == search_url %}active{% endif %}">
+        <a class="nav-link" href="{{ search_url }}">Search</a>
+      </li>
+      {% else %}
+      <li class="nav-item {% if request.path == login_url %}active{% endif %}">
+        <a class="nav-link" href="{{ login_url }}">Signup</a>
+      </li>
+      <li class="nav-item {% if request.path == login_url %}active{% endif %}">
+        <a class="nav-link" href="{{ login_url }}">Login</a>
+      </li>
+      {% endif %}
+    </ul>
+    <form class="form-inline ml-auto my-2 my-lg-0">
+      <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+      <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+    </form>
+  </div>
+</nav>

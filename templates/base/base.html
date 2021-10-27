@@ -1,0 +1,44 @@
+{% load static %}
+<!DOCTYPE html>
+  <html lang="en">
+  <head>
+  <!-- Required meta tags -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <!-- From React -->
+  <meta name="theme-color" content="#000000" />
+  <title>Base Template</title>
+  <!-- From React -->
+  {% include 'base/css.html' %}
+  {% include 'reactdj/npx/css.html' %}
+  {% block base_head %}{% endblock %}
+</head>
+<body>
+  {% include 'sections/navbar/nav_search.html' %}
+  <main class='container page_container'>
+    {% if messages %}
+    <div class="alert alert-success messages">
+      {% for message in messages %}
+      <span{% if message.tags %} class="{{ message.tags }}"{% endif %}>
+        {% if message.level == DEFAULT_MESSAGE_LEVELS.ERROR %}Important: {% endif %}
+        {{ message }}<br/>
+      </span>
+      {% endfor %}
+    </div>
+    {% endif %}
+    <div class="row">
+      <div class="col-3 ml-auto">
+        {% include 'sections/block/sidebar.html' %}
+      </div>
+      <div class="col-9 mx-auto">
+        {% block pgcontent %}
+        {% endblock %}
+      </div>
+    </div>
+    {% include 'sections/footer/footer_stnd.html' %}
+    {% include 'reactdj/npx/base_embed.html' %}
+  </main>
+  {% include 'base/js.html' %}
+  {% include 'reactdj/npx/js.html' %}
+</body>
+</html>

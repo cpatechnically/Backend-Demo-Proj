@@ -1,0 +1,2 @@
+(this.webpackJsonpnpxdemo=this.webpackJsonpnpxdemo||[]).push([[4],{89:function(e){e.exports=JSON.parse('[{"page":1,"required":true,"name":"full_name","type":"text","placeholder":"You full name..."},{"page":1,"required":true,"name":"email","type":"email","placeholder":"hello@teamcfe.com"}]')}}]);
+//# sourceMappingURL=4.1d42489c.chunk.js.map

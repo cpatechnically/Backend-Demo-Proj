@@ -1,0 +1,39 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Home Page Template</title>
+	{% block base_head %}
+		<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css" integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l" crossorigin="anonymous">
+		<link rel='stylesheet' href='{% static "css/base.css" %}' >
+		<link rel='stylesheet' href='{% static "css/index.css" %}' >
+	{% endblock %}
+</head>
+<body>
+<!-- Start Landing Page -->
+{% include 'sections/navbar/nav_search.html' %}
+<div class='text-center'>
+	<h1>Hello, world we're working!</h1>
+</div>
+
+<div class='row'>
+	<div class='col'>
+		<p>{{ content }}</p>
+	</div>
+</div>
+{% if request.user.is_authenticated %}
+<div class='row'>
+	<div class='col'>
+	<h1>Premium</h1>
+	{{ premium_content }}
+</div>
+{% endif %}
+
+{% include 'sections/footer/footer_stnd.html' %}
+</body>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+</html>
+

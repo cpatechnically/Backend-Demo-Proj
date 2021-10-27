@@ -1,0 +1,17 @@
+<div class="card card--primary card__list">
+    <header class="card__header">{{instance.name}} / {{instance.id}}</header>
+    <div class="card__body card-body">
+        <div class='text-center'>
+            <a href="{{ instance.get_absolute_url }}" class="btn btn-primary my-2">View</a>
+            <button type="submit" href="" class="btn btn-secondary my-2 course-itemset-btn" slug="{{instance.slug}}">Edit Item</button>
+        </div>
+        <div class="card__courseitem-instructor mb-2">
+            <div class="col">
+                <h3>Topic: {{instance.topic}}</h3>
+                <p>{{instance.slug}}</p>
+                <p><a href="{{instance.demo_link}}" target="_blank">Demo</a></p>
+                <p>{{instance.description}}</p>
+            </div>
+        </div>
+    </div>
+</div>

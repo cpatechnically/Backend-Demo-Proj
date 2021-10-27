@@ -1,0 +1,47 @@
+{% load static%}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{% static 'css/selectors.css' %}">
+    <title>Document</title>
+</head>
+<body>
+<h1>{{pgname}}</h1>
+<h3>Basic Selectors</h3>
+<p></p>
+
+<h3>Relational Selectors</h3>
+<section id="products">
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sunt minus ipsam nulla aut, adipisci maxime atque, cupiditate consequatur commodi perspiciatis nesciunt ratione sequi, voluptates delectus deleniti totam iusto repudiandae corrupti.</p>
+    <article><p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nam ipsam cupiditate ex aut maxime modi accusantium nulla voluptas! Soluta at vel reiciendis unde nisi ut distinctio corporis tenetur mollitia excepturi.</p></article>
+</section>
+
+<h3>Pseudo-class Selectors</h3>
+<p>:first-of-type, :last-of-type, :first-child, :last-child</p>
+<article>
+    <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Dolorem repellat, tenetur eveniet sed quisquam, nam placeat ut aperiam sunt saepe perferendis pariatur eos facere fugit. Maxime nostrum nisi natus quidem!</p>
+    <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Dolorem repellat, tenetur eveniet sed quisquam, nam placeat ut aperiam sunt saepe perferendis pariatur eos facere fugit. Maxime nostrum nisi natus quidem!</p>
+    <a href="#">Visited</a>
+    <a href=>Not VisitedLink</a>
+    <p>nth-child</p>
+    <ul>
+        <li>Item1</li>
+        <li>Item2</li>
+        <li>Item3</li>
+        <li>Item4</li>
+        <li>Item5</li>
+    </ul>
+</article>
+
+
+<h3>Pseudo-element Selectors</h3>
+<p>::first-letter, :last-of-type, :first-child, :last-child</p>
+<h1>Pseudo-elements are used to stlye a part of an element EX: first letter / <br/>pseudo-classes are used to style elements in a particular STATE EX: hovered anchor</h1>
+
+<p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Dolorem repellat, tenetur eveniet sed quisquam, nam placeat ut aperiam sunt saepe perferendis pariatur eos facere fugit. Maxime nostrum nisi natus quidem!</p>
+
+</body>
+</html>

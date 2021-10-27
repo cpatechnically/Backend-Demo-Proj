@@ -1,0 +1,32 @@
+{% extends "base/base.html" %}
+{% load crispy_forms_tags %}
+
+{% block pgcontent %}
+
+<div class='row'>
+    <div class='col-12 col-md-6'>
+        <h2>Course: {{ object.section.entity.name_only }}</h2><br>
+        <h2>CourseItem: {{ object.name }}</h2><br>
+        Section: {{object.section}} <br>
+    </div>
+    <div class='col-12 col-md-6'>
+        Video/Course RunTime: {{object.video_length}} <br>
+        Completed?: {{object.completed}} <br>
+        <h6 class="card-text">Added: {{instance.created}}> </h6>
+        <h6 class="card-text">Modified: {{instance.last_modified}}> </h6>
+        <a href="{{object.item_url}}">Course Link</a><br>
+        <a href="{{object.project_url}}">Project/Demo Link</a><br>
+        Description: {{object.description}} <br>
+        Code Ref: {{object.code_ref}} <br>
+    </div>
+</div>
+<div class="row" class="mb-5">
+  <div class='col text-center'>
+    <a href="{% url 'courses:courseitem-update' object.slug %}" class="btn btn-secondary my-2 course-itemset-btn" slug="{{object.slug}}">Edit Item</a>
+  </div>
+  <div class='col text-center'>
+    <a href="{% url 'courses:courseitem-delete' object.slug %}" class="btn btn-danger my-2">Delete</a>
+  </div>
+</div>
+ 
+{% endblock %}

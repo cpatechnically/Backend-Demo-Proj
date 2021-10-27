@@ -1,0 +1,38 @@
+body {
+    margin: 10px;
+}
+
+#products p {
+    color: orange
+}
+
+article :first-child {
+    font-size: 140%;
+    font-style: italic;
+}
+
+article :last-child {
+    font-weight: bold;
+}
+
+ul li:nth-child(odd){
+    color:deeppink
+}
+
+a:visited,
+a:link {
+    color: rgb(22, 42, 219)
+}
+
+a:hover, 
+a:focus{
+    color:deeppink
+}
+
+p::first-letter{
+    font-size:140%;
+    font-weight: bold;
+}
+p::first-line{
+    font-weight: bold;
+}
